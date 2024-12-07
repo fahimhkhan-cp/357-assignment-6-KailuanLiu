@@ -175,6 +175,8 @@ void filter_state(County *counties, int *entries, const char *state_abbr) {
     }
     *entries = count;
     printf("filter: state == %s (%d entries)\n", state_abbr, *entries);
+    display(counties, *entries);
+
 }
 
 // looks for field
@@ -237,7 +239,6 @@ void filter_field(County *counties, int *entries, const char *line, const char *
     }
     *entries = count;
     printf("Filter: %s %s %.2f (%d entries)\n", field, op, value, *entries);
-    display(counties, *entries);
     
 }
 // computes total population 
